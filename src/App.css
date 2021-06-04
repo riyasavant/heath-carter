@@ -1,0 +1,9 @@
+.heading {
+    padding: 30px;
+    font-size: 60px;
+}
+
+.equations-container {
+    display: flex;
+    justify-content: space-around;
+}
