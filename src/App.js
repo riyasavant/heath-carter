@@ -46,16 +46,18 @@ function App() {
   }
 
   function calculateEndomorphy() {
-    const X = (allData.triceps + allData.subscapular + allData.ss) * (170.18 / allData.height);
-    const final = -0.7182 + (0.1451 * X) - (0.00068 * X * X) + (0.0000014 * X * X * X);
+    const X = (parseFloat(allData.triceps) + parseFloat(allData.subscapular) + parseFloat(allData.ss)) * (170.18 / parseFloat(allData.height));
+    const final = - 0.7182 + (0.1451 * X) - (0.00068 * X * X) + (0.0000014 * X * X * X);
     setResults({
       ...results,
       endomorphy: final
     })
+
+    console.log(X, final);
   }
 
   function calculateCAG() {
-    const CAG = allData.fag - allData.ts / 10;
+    const CAG = parseFloat(allData.fag) - parseFloat(allData.ts) / 10;
     setData({
       ...allData,
       cag: CAG
@@ -63,7 +65,7 @@ function App() {
   }
 
   function calculateCCG() {
-    const CCG = allData.mcg - allData.cs / 10;
+    const CCG = parseFloat(allData.mcg) - parseFloat(allData.cs) / 10;
     setData({
       ...allData,
       ccg: CCG
@@ -71,7 +73,7 @@ function App() {
   }
 
   function calculateMesomorphy() {
-    const final = ((0.858 * allData.hb) + (0.601 * allData.fb) + (0.188 * allData.cag) + (0.161 * allData.ccg)) - (0.131 * allData.height) + 4.5;
+    const final = ((0.858 * parseFloat(allData.hb)) + (0.601 * parseFloat(allData.fb)) + (0.188 * parseFloat(allData.cag)) + (0.161 * parseFloat(allData.ccg))) - (0.131 * parseFloat(allData.height)) + 4.5;
     setResults({
       ...results,
       mesomorphy: final
@@ -79,7 +81,7 @@ function App() {
   }
 
   function calculateEctomorphy() {
-    const HWR = allData.height / Math.cbrt(allData.weight);
+    const HWR = parseFloat(allData.height) / Math.cbrt(parseFloat(allData.weight));
     let final = 0;
     if(HWR >= 40.75) 
       final = (0.732 * HWR) - 28.58;
@@ -95,6 +97,8 @@ function App() {
       ectomorphy: final
     });
   }
+
+  console.log(allData);
 
   return (
     <div className="container">
