@@ -52,8 +52,6 @@ function App() {
       ...results,
       endomorphy: final
     })
-
-    console.log(X, final);
   }
 
   function calculateCAG() {
@@ -97,8 +95,6 @@ function App() {
       ectomorphy: final
     });
   }
-
-  console.log(allData);
 
   return (
     <div className="container">
