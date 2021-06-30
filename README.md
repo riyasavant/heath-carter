@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Heath Carter Somatotype Simplifier
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p>This application is based on the research paper <a href="https://www.mdthinducollege.org/ebooks/statistics/Heath-CarterManual.pdf">Heath Carter</a>. It aims to simplify the process of calculating complex equations for Somatotype Analysis.</p>
+<h2>1. Equations for Somatotype Analysis</h2>
+<h3>a. Endomorphy</h3>
+<div>Endomorphy = -0.7182 + 0.1451 (X) - 0.00068 (X^2) + 0.0000014 (X^3)</div>
+<ul>
+  <li>X = (triceps + subscapular + supraspinale skinfolds) * (170.18 / height in cm)</li>
+</ul>
+<h3>b. Mesomorphy</h3>
+<div>Mesomorphy = (0.858 * HB + 0.601 * FB +0.188 * CAG + 0.161 * CCG) - (0.131 * H) + 4.5</div>
+<ul>
+  <li>HB = humerus breadth</li>
+  <li>FB = femur breadth</li>
+  <li>CAG = corrected arm girth</li>
+  <li>CCG = corrected calf girth</li>
+  <li>H = height</li>
+</ul>
+<h3>c. Ectomorphy</h3>
+<div>If HWR >= 40.75, then Ectomorphy = 0.732 * HWR - 28.58</div>
+<div>If HWR < 40.75 and > 38.25, then Ectomorphy = 0.463 * HWR - 17.63</div>
+<div>If HWR <= 38.25, then Ectomorphy = 0.1 (or recorded as 1/2)</div>
+<ul>
+  <li>HWR = height / cube root of weight</li>
+</ul>
+<h2>2. Getting Started</h2>
+<div>1. Clone this repository</div>
+<div>2. Install dependencies using yarn</div>
+<div>3. Run yarn start</div>
+<hr />
+<div>Developed by: Riya Savant</div>
+<div>Usage: Ongoing Research Paper Analysis</div>
+<div>Hosted at: <a href="heath-carter.netlify.app/">heath-carter.netlify.app/</a></div>
